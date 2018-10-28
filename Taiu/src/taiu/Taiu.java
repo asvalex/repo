@@ -10,7 +10,14 @@ package taiu;
  * @author alex
  */
 public class Taiu {
+        //cod folositor
+       //JFrame ancestor = (JFrame) SwingUtilities.windowForComponent(jPanel1);
+       //Window window = SwingUtilities.getWindowAncestor(jMenuItem);
+       //Component invoker = jMenuItem1.getInvoker();
+       //System.out.println(evt.getSource());
 
+    
+    
     /**
      * @param args the command line arguments
      */

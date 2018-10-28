@@ -66,7 +66,6 @@ public class Ferestre extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Proiect_Taiu");
         setLocation(new java.awt.Point(100, 0));
-        setPreferredSize(new java.awt.Dimension(1000, 500));
         setSize(new java.awt.Dimension(1000, 500));
 
         jPanel1.setBackground(new java.awt.Color(204, 204, 204));
@@ -117,12 +116,6 @@ public class Ferestre extends javax.swing.JFrame {
             public String getElementAt(int i) { return strings[i]; }
         });
         jScrollPane2.setViewportView(jList1);
-
-        jColorChooser1.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
-            public void propertyChange(java.beans.PropertyChangeEvent evt) {
-                jColorChooser1PropertyChange(evt);
-            }
-        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -187,13 +180,13 @@ public class Ferestre extends javax.swing.JFrame {
         jMenuBar1.add(jMenu1);
 
         jMenu2.setText("View");
-        jMenu2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenu2ActionPerformed(evt);
-            }
-        });
 
         jMenuItem2.setText("Minimize");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
         jMenu2.add(jMenuItem2);
 
         jMenuBar1.add(jMenu2);
@@ -210,7 +203,7 @@ public class Ferestre extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 113, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
@@ -232,7 +225,6 @@ public class Ferestre extends javax.swing.JFrame {
        
         if (jCheckBox1.isSelected()) {
            jPanel1.setBackground(jColorChooser1.getColor()); 
-        jPanell.setState(1);
         }
         else {
            jPanel1.setBackground(new Color(204, 204, 204));
@@ -240,17 +232,13 @@ public class Ferestre extends javax.swing.JFrame {
                 
     }//GEN-LAST:event_jCheckBox1ActionPerformed
 
-    private void jColorChooser1PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_jColorChooser1PropertyChange
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jColorChooser1PropertyChange
-
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         System.exit(0);
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
-    private void jMenu2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu2ActionPerformed
-        //Ferestre.setState
-    }//GEN-LAST:event_jMenu2ActionPerformed
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        this.setState(1);
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     /**
      * @param args the command line arguments
